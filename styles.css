@@ -1,0 +1,145 @@
+/* ===============================
+   Base Styles and Reset
+================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ===============================
+   Layout Grid (2D) for Main Structure
+================================== */
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+/* ===============================
+   Header
+================================== */
+.header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ===============================
+   Navigation (Flexbox)
+================================== */
+.nav {
+  background-color: #333;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav li {
+  margin: 0.5rem 1rem;
+}
+
+.nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* ===============================
+   Content Section
+================================== */
+.content {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* ===============================
+   Sidebar Section
+================================== */
+.sidebar {
+  background-color: #eaeaea;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* ===============================
+   Footer
+================================== */
+.footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===============================
+   Cards (Flexbox Inside Content)
+================================== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 30%;
+  background-color: #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* ===============================
+   Responsive Layouts
+================================== */
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-grid {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
